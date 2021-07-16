@@ -276,6 +276,40 @@ h4 {
   text-decoration: underline;
 }
 
+/* Live Sports */
+.live-sports {
+  background: url('../img/live-sports.jpg') no-repeat center center / cover;
+  height: 80rem;
+  position: relative;
+}
+
+.live-sports-content {
+  position: absolute;
+  top: 16rem;
+  left: 10rem;
+  max-width: 55rem;
+}
+
+.live-sports-logos {
+  width: 30rem;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.live-sports-logos > div {
+  background: url('../img/network-logo-bg.png') no-repeat center center / cover;
+  height: 6rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.live-sports-logos img {
+  width: 4rem;
+}
 
 /* Media queries */
 @media(max-width: 1100px) {
@@ -333,5 +367,15 @@ h4 {
 
   .live-border {
     padding: 3rem 1rem;
+  }
+
+  .live-sports {
+    background: url('../img/live-sports-small.jpg') no-repeat center center / cover;
+  }
+
+  .live-sports-content {
+    top: 3rem;
+    left: 3rem;
+    margin-top: 6rem;
   }
 }
