@@ -116,6 +116,8 @@ h4 {
   display: flex;
   justify-content: flex-end;
   padding: 2rem 4rem;
+  z-index: 2;
+  position: relative;
 }
 
 .header nav .login-btn {
@@ -149,6 +151,22 @@ h4 {
 .header .header-text-2 {
   font-size: 1.8rem;
   margin: 2.5rem 0;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 18rem;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.76) 15.54%,
+    rgba(0, 0, 0, 0.192) 60.23%,
+    rgba(0, 0, 0, 8e-5) 100%
+  );
 }
 
 /* Sub Header */
@@ -233,7 +251,39 @@ h4 {
 .categories .cover-4 {
   background: url('../img/cover-4.jpg') no-repeat center center / cover;
 }
+
+/* Live */
+.live {
+  background: #151516;
+  padding: 4rem;
+}
+
+.live-border {
+  border: 0.4rem solid #1ce783;
+  border-radius: 1.6rem;
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.live a {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  text-decoration: underline;
+}
+
+
 /* Media queries */
+@media(max-width: 1100px) {
+  .categories .covers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media(max-width: 768px) {
   .header .logo {
     width: 20rem;
@@ -266,5 +316,22 @@ h4 {
   .sub-header > div:last-of-type {
     justify-self: center;
     align-self: center;
+  }
+
+  .text-xl {
+    line-height: 1.3;
+    font-size: 4rem;
+  }
+
+  .sub-text {
+    font-size: 2rem;
+  }
+
+  .categories .covers {
+    grid-template-columns: 1fr;
+  }
+
+  .live-border {
+    padding: 3rem 1rem;
   }
 }
